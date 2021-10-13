@@ -15,4 +15,5 @@ jobs:
       # uses: Olivr/copybara-action@19127a45a319c24f79175814af5cc1c2a83e9b05
         uses: Olivr/copybara-action@v1.2.2
         with:
+          ssh_key: ${{ secret.DESTINATION_SSH_KEY }}
           destination_repo: https://github.com/sriharibtl/copybaradestination.git
