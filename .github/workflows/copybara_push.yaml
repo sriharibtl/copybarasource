@@ -17,3 +17,5 @@ jobs:
         with:
           ssh_key: ${{ secrets.DESTINATION_SSH_KEY }}
           destination_repo: https://github.com/sriharibtl/copybaradestination.git
+          workflow: push
+          sot_repo: https://github.com/sriharibtl/copybarasource.git
