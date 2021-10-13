@@ -20,3 +20,4 @@ jobs:
           sot_branch: main
           destination_repo: https://github.com/sriharibtl/copybaradestination.git
           destination_branch: main
+          workflow: push
