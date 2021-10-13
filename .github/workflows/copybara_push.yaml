@@ -24,4 +24,4 @@ jobs:
           # ssh known hosts file contents, for authenticating with Copybara
           # ssh_known_hosts: 
           # copy.bara.sky file path
-          path: ./github/
+          path: .
