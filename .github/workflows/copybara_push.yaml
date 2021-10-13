@@ -9,3 +9,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      
+      - name: Copybara Action
+      # You may pin to the exact commit or the version.
+      # uses: wilmol/copybara-action@4eb424d09cd58a33d988e1e1e30cc899bb40a328
+        uses: wilmol/copybara-action@v1
+        with:
+          # git config username, for authoring with Copybara
+          # git_name: 
+          # git config email, for authoring with Copybara
+          # git_email: 
+          # ssh public key, for authenticating with Copybara
+          # ssh_key: 
+          # ssh known hosts file contents, for authenticating with Copybara
+          # ssh_known_hosts: 
+          # copy.bara.sky file path
+          path: ./github/
