@@ -18,3 +18,4 @@ jobs:
           destination_repo: https://github.com/sriharibtl/copybaradestination.git
           workflow: default
           custom_config: copy.bara.sky
+          copybara_options: --init-history
