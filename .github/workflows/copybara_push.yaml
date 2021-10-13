@@ -10,18 +10,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       
-      - name: Copybara Action
+      - name: Copybara Action 2
       # You may pin to the exact commit or the version.
-      # uses: wilmol/copybara-action@4eb424d09cd58a33d988e1e1e30cc899bb40a328
-        uses: wilmol/copybara-action@v1
+      # uses: Olivr/copybara-action@19127a45a319c24f79175814af5cc1c2a83e9b05
+        uses: Olivr/copybara-action@v1.2.2
         with:
-          # git config username, for authoring with Copybara
-          git_name: sriharibtl
-          # git config email, for authoring with Copybara
-          git_email: sbn@infoblox.com
-          # ssh public key, for authenticating with Copybara
-          # ssh_key: 
-          # ssh known hosts file contents, for authenticating with Copybara
-          # ssh_known_hosts: 
-          # copy.bara.sky file path
-          path: .
+          destination_repo: https://github.com/sriharibtl/copybaradestination.git
