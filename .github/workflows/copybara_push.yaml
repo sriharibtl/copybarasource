@@ -18,6 +18,7 @@ jobs:
           ssh_key: ${{ secrets.DESTINATION_SSH_KEY }}
           access_token: ${{ secrets.GH_TOKEN }}
           sot_repo: https://github.com/sriharibtl/copybarasource.git
+          sot_branch: main
           destination_repo: https://github.com/sriharibtl/copybaradestination.git
           workflow: push
           copybara_options: --force
