@@ -16,7 +16,7 @@ jobs:
         uses: wilmol/copybara-action@v1
         with:
           # git config username, for authoring with Copybara
-          git_name: Srihari B N
+          git_name: sriharibtl
           # git config email, for authoring with Copybara
           git_email: sbn@infoblox.com
           # ssh public key, for authenticating with Copybara
