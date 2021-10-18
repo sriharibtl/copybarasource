@@ -12,11 +12,13 @@ core.workflow(
         fetch = "main",
         push = "main",
     ),
-    # Copy everything but don't remove a README_INTERNAL.txt file if it exists.
-    #destination_files = glob(["copybara2/**"], exclude = ["README_INTERNAL.txt"]),
+     # Change path to the folder you want to publish publicly
+    origin_files = glob(["third_party/copybara/**"]),
 
     authoring = authoring.pass_thru("Default email <default@default.com>"),
-    #transformations = [
-	    #core.move("", "third_party/copybara2"),
-	#],
+
+    # Change the path here to the folder you want to publish publicly
+    transformations = [
+	    core.move("third_party/copybara", ""),
+	],
 )
