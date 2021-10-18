@@ -16,6 +16,7 @@ jobs:
         uses: Olivr/copybara-action@v1.2.2
         with:
           ssh_key: ${{ secrets.SSH_KEY }}
+          access_token: ${{ secrets.GH_TOKEN }}
           sot_repo: sriharibtl/copybarasource
           sot_branch: main
           destination_repo: sriharibtl/copybaradestination
