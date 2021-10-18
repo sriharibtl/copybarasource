@@ -13,7 +13,7 @@ jobs:
       - uses: olivr/copybara-action@v1.2.3
         with:
           access_token: ${{ secrets.GH_TOKEN }}
-          ssh_key: ${{ secrets.DESTINATION_SSH_KEY }}
+          ssh_key: ${{ secrets.SSH_KEY }}
           sot_repo: sriharibtl/copybarasource
           destination_repo: sriharibtl/copybaradestination
           push_include: 'third_party'
