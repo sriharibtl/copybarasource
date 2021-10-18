@@ -19,3 +19,4 @@ jobs:
           workflow: default
           custom_config: copy.bara.sky
           copybara_options: --init-history
+          push_include: "third_party"
