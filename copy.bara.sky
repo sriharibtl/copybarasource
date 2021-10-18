@@ -13,10 +13,10 @@ core.workflow(
         push = "main",
     ),
     # Copy everything but don't remove a README_INTERNAL.txt file if it exists.
-    destination_files = glob(["copybara/**"], exclude = ["README_INTERNAL.txt"]),
+    destination_files = glob(["copybara2/**"], exclude = ["README_INTERNAL.txt"]),
 
     authoring = authoring.pass_thru("Default email <default@default.com>"),
     transformations = [
-	    core.move("", "third_party/copybara"),
+	    core.move("", "third_party/copybara2"),
 	],
 )
