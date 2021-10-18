@@ -3,18 +3,21 @@ name: CopyBara-Push
 on: push
 
 jobs:
-  move-code:
+  copybara:
+    name: Copy bara code push
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Copybara Action 2
+      # You may pin to the exact commit or the version. bg
+      # uses: Olivr/copybara-action@19127a45a319c24f79175814af5cc1c2a83e9b05
+        uses: Olivr/copybara-action@v1.2.2
         with:
-          fetch-depth: 0
-
-      - uses: olivr/copybara-action@v1.2.3
-        with:
-          access_token: ${{ secrets.GH_TOKEN }}
           ssh_key: ${{ secrets.SSH_KEY }}
           sot_repo: sriharibtl/copybarasource
+          sot_branch: main
           destination_repo: sriharibtl/copybaradestination
-          push_include: 'third_party'
-          
+          destination_branch: main
+          workflow: push
