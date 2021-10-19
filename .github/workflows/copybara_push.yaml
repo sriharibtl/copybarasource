@@ -16,4 +16,4 @@ jobs:
           sot_branch: main
           destination_repo: sriharibtl/copybaradestination
           destination_branch: main
-          push_include: 'third_party'
+          custom_config: copy.bara.sky
