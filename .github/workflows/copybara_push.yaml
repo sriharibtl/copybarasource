@@ -5,8 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          path: /tmp/copybarasource
       - name: Setup Bazel
         uses: abhinavsingh/setup-bazel@v3
         with:
@@ -21,6 +19,5 @@ jobs:
         with:
           repository: google/copybara
           path: copybara
-      - run: cd copybara bazel 
-      - run: build java/com/google/copybara
-      - run: java/com/google/copybara /tmp/copybarasource/copy.bara.sky
+      - run: bazel build copybara/java/com/google/copybara
+      - run: copybara/java/com/google/copybara copy.bara.sky
