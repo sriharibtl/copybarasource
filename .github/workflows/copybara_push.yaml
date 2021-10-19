@@ -15,5 +15,4 @@ jobs:
           sot_repo: sriharibtl/copybarasource
           sot_branch: main
           destination_repo: sriharibtl/copybaradestination
-          workflow: create
           custom_config: copy.bara.sky
