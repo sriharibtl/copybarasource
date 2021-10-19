@@ -6,11 +6,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-
-      - uses: olivr/copybara-action@v1.2.3
+          path: /tmp/copybarasource
+      - name: Setup Bazel
+        uses: abhinavsingh/setup-bazel@v3
         with:
-          ssh_key: ${{ secrets.SSH_KEY }}
-          access_token: ${{ secrets.GH_TOKEN }}
-          sot_repo: sriharibtl/copybarasource
-          destination_repo: sriharibtl/copybaradestination
+          version: 4.2.1
+      - name: Setup Java JDK
+        uses: actions/setup-java@v2.3.1
+        with:
+          java-version: 1.8.0_301
+          distribution: jre
+      - name: checkout copybara repo
+        uses: actions/checkout@v2
+        with:
+          repository: google/copybara
+          path: copybara
+      - run: cd copybara bazel 
+      - run: build java/com/google/copybara
+      - run: java/com/google/copybara /tmp/copybarasource/copy.bara.sky
