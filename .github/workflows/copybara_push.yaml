@@ -12,7 +12,7 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v2.3.1
         with:
-          java-version: 17
+          java-version: 11.0.12+7
           distribution: temurin
           java-package: jre
       - name: checkout copybara repo
