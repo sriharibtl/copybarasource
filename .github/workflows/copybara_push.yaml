@@ -8,9 +8,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: wilmol/copybara-action@v1
+      - uses: olivr/copybara-action@v1.2.3
         with:
+          access_token: ${{ secrets.GH_TOKEN }}
           ssh_key: ${{ secrets.SSH_KEY }}
-          git_name: sriharibtl
-          git_email: sbn@infoblox.com
-          path: copy.bara.sky
+          sot_repo: sriharibtl/copybarasource
+          sot_branch: main
+          destination_repo: sriharibtl/copybaradestination
+          destination_branch: main
+          push_include: 'third_party'
