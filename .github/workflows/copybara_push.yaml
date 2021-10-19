@@ -12,8 +12,8 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v2.3.1
         with:
-          java-version: 1.8.0_301
-          distribution: jre
+          java-version: 17
+          java-package: jre
       - name: checkout copybara repo
         uses: actions/checkout@v2
         with:
