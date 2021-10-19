@@ -5,20 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Bazel
-        uses: abhinavsingh/setup-bazel@v3
         with:
-          version: 4.2.1
-      - name: Setup Java JDK
-        uses: actions/setup-java@v2.3.1
+          fetch-depth: 0
+
+      - uses: olivr/copybara-action@v1.2.3
         with:
-          java-version: 11.0.12+7
-          distribution: temurin
-          java-package: jdk
-      - name: checkout copybara repo
-        uses: actions/checkout@v2
-        with:
-          repository: google/copybara
-          path: copybara
-      - run: bazel build copybara/java/com/google/copybara
-      - run: copybara/java/com/google/copybara copy.bara.sky
+          access_token: ${{ secrets.GH_TOKEN }}
+          ssh_key: ${{ secrets.SSH_KEY }}
+          sot_repo: sriharibtl/copybarasource
+          destination_repo: sriharibtl/copybaradestination
+          push_include: 'third_party'
