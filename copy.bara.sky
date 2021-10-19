@@ -10,7 +10,6 @@ core.workflow(
     destination = git.destination(
         url = destinationURL,
         fetch = "main",
-        push = "main",
     ),
      # Change path to the folder you want to publish publicly
     origin_files = glob(["third_party/copybara/**"]),
