@@ -20,5 +20,5 @@ jobs:
         uses: abhinavsingh/setup-bazel@v3
         with:
           version: 4.2.1
-      - run: pwd; bazel build copybara/java/com/google/copybara
+      - run: pwd; bazel build //java/com/google/copybara
       - run: java/com/google/copybara ../copy.bara.sky
