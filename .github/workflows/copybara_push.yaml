@@ -5,10 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Bazel
-        uses: abhinavsingh/setup-bazel@v3
-        with:
-          version: 4.2.1
       - name: Setup Java JDK
         uses: actions/setup-java@v2.3.1
         with:
@@ -21,5 +17,9 @@ jobs:
           repository: google/copybara
           path: copybara
       - run: cd copybara
+      - name: Setup Bazel
+        uses: abhinavsingh/setup-bazel@v3
+        with:
+          version: 4.2.1
       - run: bazel build java/com/google/copybara
       - run: java/com/google/copybara ../copy.bara.sky
