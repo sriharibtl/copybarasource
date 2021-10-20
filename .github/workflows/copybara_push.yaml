@@ -19,4 +19,4 @@ jobs:
       - name: Setup Bazel
         uses: holvonix-open/setup-bazelisk@v0.6.1
       - run: cd copybara; bazel build java/com/google/copybara
-      - run: java/com/google/copybara ../copy.bara.sky
+      - run: bazel-bin/java/com/google/copybara/copybara ../copy.bara.sky
