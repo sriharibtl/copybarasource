@@ -19,5 +19,5 @@ jobs:
       - name: Setup Bazel
         uses: holvonix-open/setup-bazelisk@v0.6.1
       - run: cd copybara; bazel build java/com/google/copybara
-      - run: git config --global user.name "FIRST_NAME LAST_NAME"; git config --global user.email "MY_NAME@example.com"
+      - run: git config --global user.name "sriharibtl"; git config --global user.email "sbn@infoblox.com"
       - run: copybara/bazel-bin/java/com/google/copybara/copybara ./copy.bara.sky --force 
