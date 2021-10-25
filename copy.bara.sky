@@ -1,5 +1,5 @@
-url = "https://github.com/sriharibtl/copybarasource.git"
-destinationURL = "https://github.com/sriharibtl/copybaradestination.git"
+url = "git@github.com:sriharibtl/copybarasource.git"
+destinationURL = "git@github.com:sriharibtl/copybaradestination.git"
 
 core.workflow(
     name = "default",
