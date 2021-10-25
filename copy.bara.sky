@@ -7,10 +7,10 @@ core.workflow(
         url = url,
         ref = "main",
     ),
-    destination = git.destination(
+    destination = git.github_pr_destination(
         url = destinationURL,
-        fetch = "main",
-        push = "main",
+        destination_ref = "main",
+        pr_branch = "copybara",
     ),
     origin_files = glob(["third_party/copybara/**"]),
     # Copy everything but don't remove a README_INTERNAL.txt file if it exists.
