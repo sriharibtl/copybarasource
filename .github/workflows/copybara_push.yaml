@@ -18,3 +18,5 @@ jobs:
           destination_branch: main
           push_include: 'third_party'
           custom_config: copy.bara.sky
+          workflow: pr
+          pr_number: 12345
