@@ -21,5 +21,7 @@ jobs:
       - run: cd copybara; bazel build java/com/google/copybara
       - uses: oleksiyrudenko/gha-git-credentials@v2-latest
         with:
+          name: github action
+          email: action@github.com
           token: '${{ secrets.GH_TOKEN }}'
       - run: copybara/bazel-bin/java/com/google/copybara/copybara ./copy.bara.sky --force 
