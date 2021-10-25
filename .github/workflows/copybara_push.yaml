@@ -12,7 +12,5 @@ jobs:
         with:
           access_token: ${{ secrets.GH_TOKEN }}
           ssh_key: ${{ secrets.SSH_KEY }}
-          sot_repo: sriharibtl/copybarasource
-          destination_repo: sriharibtl/copybaradestination
           custom_config: copy.bara.sky
           workflow: default
