@@ -13,10 +13,5 @@ jobs:
           access_token: ${{ secrets.GH_TOKEN }}
           ssh_key: ${{ secrets.SSH_KEY }}
           sot_repo: sriharibtl/copybarasource
-          sot_branch: main
           destination_repo: sriharibtl/copybaradestination
-          destination_branch: main
-          push_include: 'third_party'
           custom_config: copy.bara.sky
-          workflow: default
-          pr_number: 12345
